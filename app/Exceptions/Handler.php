@@ -4,8 +4,10 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
-use Illuminate\Routing\Exceptions\ThrottleRequestsException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Illuminate\Http\Exceptions\ThrottleRequestsException;
+use Symfony\Component\HttpKernel\Exception\TooManyRequestsHttpException;
+
 
 class Handler extends ExceptionHandler
 {
@@ -34,13 +36,10 @@ class Handler extends ExceptionHandler
         });
     }
 
-
     public function render($request, Throwable $exception)
     {
-        if ($exception instanceof ThrottleRequestsException) {
-            return response()->json([
-                'message' => 'Too Many Requests',
-            ], 429);
+        if ($exception instanceof TooManyRequestsHttpException || $exception instanceof ThrottleRequestsException) {
+            return response()->json(['message' => 'Too many requests. Please try again later.'], 429);
         }
 
         return parent::render($request, $exception);
