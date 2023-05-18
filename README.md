@@ -101,7 +101,7 @@ Content-Type: application/json</br>
     }</br>
 }</br>
 </blockquote>
-![image](https://github.com/RkDevlops24/university-service/assets/106295693/4386dbaf-78e4-45ee-bc2d-85224232af2d)
+
 <br/>
 <br/>
 
@@ -154,7 +154,7 @@ Content-Type: application/json</br>
     ]<br/>
 }<br/>
 </blockquote>
-![image](https://github.com/RkDevlops24/university-service/assets/106295693/c5493817-6ae0-496a-acaa-4490bc1ff83c)
+
 <br/>
 <br/>
 
