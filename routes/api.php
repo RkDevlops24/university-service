@@ -24,6 +24,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
  */
 Route::middleware('throttle:10,1')->group(function () {
     //Set route for calling 
-    Route::get('/country/{ip}', [UniversityController::class, 'getCountryByIp']);
-    Route::get('/universities/{country}', [UniversityController::class, 'getUniversitiesByCountry']);
+    Route::post('/country', [UniversityController::class, 'getCountryByIp']);
+    Route::post('/universities', [UniversityController::class, 'getUniversitiesByCountry']);
 });
