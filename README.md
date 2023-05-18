@@ -174,7 +174,7 @@ To run the project, follow these steps:<br/>
 1. Download Laravel Project:<br/>
     a. Clone the repository:
     <blockquote>
-    git clone https://github.com/RkDevlops24/university-service.git
+    git clone https://github.com/RkDevlops24/RkDevlops24
     </blockquote>
     b. Download attached university-service.zip file:
     <blockquote>
